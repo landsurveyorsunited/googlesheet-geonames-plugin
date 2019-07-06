@@ -5,7 +5,7 @@ function geoname_responce( name, admin1code, id, fuzzy ) {
   }
   name = name.trim().split(' ').join('%20');
 
-  var url = "http://api.geonames.org/search?style=MEDIUM&country=MM&maxRows=10&username=" + id + "&fuzzy=" + fuzzy + "&name=" + name + "&adminCode1=" + admin1code;
+  var url = "http://api.geonames.org/search?style=MEDIUM&country=MM&maxRows=10&landsurveyors=" + id + "&fuzzy=" + fuzzy + "&name=" + name + "&adminCode1=" + admin1code;
   var xml = UrlFetchApp.fetch(url).getContentText();
   var doc = XmlService.parse(xml);  
  
@@ -22,7 +22,7 @@ function geoname_name( name, admin1code, id, fuzzy ) {
 
   name = name.trim().split(' ').join('%20');
 
-  var url = "http://api.geonames.org/search?style=MEDIUM&country=MM&maxRows=10&username=" + id + "&fuzzy=" + fuzzy + "&name=" + name + "&adminCode1=" + admin1code;
+  var url = "http://api.geonames.org/search?style=MEDIUM&country=MM&maxRows=10&landsurveyors=" + id + "&fuzzy=" + fuzzy + "&name=" + name + "&adminCode1=" + admin1code;
   var xml = UrlFetchApp.fetch(url).getContentText();
   var doc = XmlService.parse(xml);  
  
@@ -43,7 +43,7 @@ function geoname_lat( name, admin1code, id, fuzzy ) {
 
   name = name.trim().split(' ').join('%20');
 
-  var url = "http://api.geonames.org/search?style=MEDIUM&country=MM&maxRows=10&username=" + id + "&fuzzy=" + fuzzy + "&name=" + name + "&adminCode1=" + admin1code;
+  var url = "http://api.geonames.org/search?style=MEDIUM&country=MM&maxRows=10&landsurveyors=" + id + "&fuzzy=" + fuzzy + "&name=" + name + "&adminCode1=" + admin1code;
   var xml = UrlFetchApp.fetch(url).getContentText();
   var doc = XmlService.parse(xml);  
  
@@ -61,7 +61,7 @@ function geoname_long( name, admin1code, id, fuzzy ) {
 
   name = name.trim().split(' ').join('%20');
 
-  var url = "http://api.geonames.org/search?style=MEDIUM&country=MM&maxRows=10&username=" + id + "&fuzzy=" + fuzzy + "&name=" + name + "&adminCode1=" + admin1code;
+  var url = "http://api.geonames.org/search?style=MEDIUM&country=MM&maxRows=10&landsurveyors=" + id + "&fuzzy=" + fuzzy + "&name=" + name + "&adminCode1=" + admin1code;
   var xml = UrlFetchApp.fetch(url).getContentText();
   var doc = XmlService.parse(xml);  
  
